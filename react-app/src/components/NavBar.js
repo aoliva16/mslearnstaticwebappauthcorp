@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 
 const NavBar = (props) => {
-  const providers = ['aad'];
+  const providers = ['azureActiveDirectory'];
   const redirect = window.location.pathname;
   const [userInfo, setUserInfo] = useState();
 
@@ -42,7 +42,7 @@ const NavBar = (props) => {
         <p className="menu-label">Auth</p>
         <div className="menu-list auth">
           {!userInfo && providers.map((provider) => (
-            <a key={provider} href={`/.auth/login/azureActiveDirectory?post_login_redirect_uri=${redirect}`}>
+            <a key={provider} href={`/.auth/login/${provider}?post_login_redirect_uri=${redirect}`}>
               {provider}
             </a>
           ))}
