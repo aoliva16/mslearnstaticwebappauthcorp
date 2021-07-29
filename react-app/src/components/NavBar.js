@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 
 const NavBar = (props) => {
-  const providers = ['aad'];
+  const providers = ['aad', "GitHub"];
   const redirect = window.location.pathname;
   const [userInfo, setUserInfo] = useState();
 
